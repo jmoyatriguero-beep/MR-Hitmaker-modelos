@@ -11,6 +11,7 @@ juntar en orden. `SHA256SUMS.txt` tiene las sumas de comprobación.
 |---|---|---|---|
 | Cerebro: Qwen3-4B-Instruct-2507, int4 para DirectML (ONNX Runtime GenAI) | `qwen3-4b-onnx-dml.*` | [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), a partir de la cuantización Q4_K_M de [unsloth](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF) | Apache 2.0 (`LICENSE-Qwen3.txt`) |
 | Oído: whisper large-v3-turbo (codificador int4, decodificador fp16) | `whisper-turbo-onnx-dml.*` | [openai/whisper-large-v3-turbo](https://huggingface.co/openai/whisper-large-v3-turbo) | MIT (`LICENSE-Whisper.txt`) |
+| Sentido (frases a vectores, para entender lo que se le pide aunque no use las palabras del manual): multilingual-e5-small, int8 (release `modelos-2`) | `sentido-e5-small.*` | [intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small), en ONNX de [Xenova](https://huggingface.co/Xenova/multilingual-e5-small) | MIT (`LICENSE-e5.txt`) |
 
 Convertidos con `onnxruntime-genai` 0.14.1. Cambios respecto al original: cuantización, cabeza del modelo de lenguaje solo
 para la última posición (`prune_lm_head`) y, en el decodificador de whisper, la clave y el valor de la atención cruzada
